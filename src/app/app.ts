@@ -12,12 +12,6 @@ import { FormBuilder } from '@angular/forms';
 export class App {
   protected title = 'gamerental';
 
-  private _formBuilder = inject(FormBuilder);
-
-  options = this._formBuilder.group({
-    bottom: 0,
-    fixed: false,
-    top: 0,
-  });
+  isLoggedIn = !!localStorage.getItem('userToken'); // Check if userToken exists
 
 }

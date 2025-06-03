@@ -32,15 +32,18 @@ html, body {
 }
 
 .side-nav-item {
-  display: block; /* Ensure buttons stack vertically */
-  text-align: left; /* Align text to the left */
-  color: white; /* White text for contrast */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer cursor for click effect */
+  padding: 8px 0; /* Add spacing between items */
   font-size: 1.1rem; /* Slightly larger font size */
-  margin: 8px 0; /* Add spacing between buttons */
 }
 
 .side-nav-item:hover {
   background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.side-nav-item:active {
+  background-color: rgba(255, 255, 255, 0.2); /* Click effect */
 }
 
 /* Main content styling */

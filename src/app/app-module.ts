@@ -12,10 +12,19 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { GamesPage } from './games-page/games-page';
+import { LoginPage } from './login-page/login-page';
+import { RentalsPage } from './rentals-page/rentals-page';
+import { ProfilePage } from './profile-page/profile-page';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    GamesPage,
+    LoginPage,
+    RentalsPage,
+    ProfilePage
   ],
   imports: [
     FormsModule,
@@ -26,6 +35,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatCheckboxModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatListModule,
     MatInputModule,
     BrowserModule,
     AppRoutingModule,

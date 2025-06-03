@@ -3,16 +3,16 @@
 </mat-toolbar>
 
 <mat-sidenav-container class="app-container">
-  <mat-sidenav #sidenav mode="side" opened class="side-nav">
-    <button mat-button class="side-nav-item" style="color: white;">Dashboard</button>
-    <button mat-button class="side-nav-item" style="color: white;" >Games</button>
-    <button mat-button class="side-nav-item" style="color: white;" >Rentals</button>
-    <button mat-button class="side-nav-item" style="color: white;" >Settings</button>
+  <mat-sidenav #sidenav mode="side" opened class="side-nav" style="padding-top: 70px">
+    <mat-list>
+      <mat-list-item class="side-nav-item" style="color: white; padding:5px;" routerLink="/">Games</mat-list-item>
+      <mat-list-item class="side-nav-item" style="color: white; padding:5px;" routerLink="/login">Login</mat-list-item>
+      <mat-list-item class="side-nav-item" style="color: white; padding:5px;" routerLink="/rentals" *ngIf="isLoggedIn">Rentals</mat-list-item>
+      <mat-list-item class="side-nav-item" style="color: white; padding:5px;" routerLink="/profile" *ngIf="isLoggedIn">Profile</mat-list-item>
+    </mat-list>
   </mat-sidenav>
 
   <mat-sidenav-content class="main-content">
-    <h1>Welcome to Game Rental</h1>
-    <p>Manage your games, rentals, and settings easily.</p>
-    <button mat-raised-button color="accent">Get Started</button>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
