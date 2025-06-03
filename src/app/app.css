@@ -1,0 +1,71 @@
+/* Full-screen layout */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+}
+
+/* Top navbar styling */
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #1976d2; /* Azure Blue theme primary color */
+  color: white; /* Contrasting text color */
+  padding: 0 16px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidenav styling */
+.side-nav {
+  width: 250px;
+  background-color: #1565c0; /* Slightly darker shade for sidenav */
+  color: white; /* Contrasting text color */
+  padding: 16px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.side-nav-item {
+  display: block; /* Ensure buttons stack vertically */
+  text-align: left; /* Align text to the left */
+  color: white; /* White text for contrast */
+  font-size: 1.1rem; /* Slightly larger font size */
+  margin: 8px 0; /* Add spacing between buttons */
+}
+
+.side-nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+/* Main content styling */
+.main-content {
+  margin-top: 64px; /* Account for fixed navbar height */
+  padding: 24px;
+  background-color: #e3f2fd; /* Light background matching Azure Blue theme */
+  color: #0d47a1; /* Dark text for contrast */
+  flex: 1; /* Take up remaining space */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+button {
+  font-size: 1rem;
+}
+
+.mat-drawer{
+  border-radius: 0;
+}
